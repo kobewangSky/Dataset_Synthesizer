@@ -253,10 +253,10 @@ TArray<uint8>  FNVImageExporter::CompressImage(IImageWrapperModule* ImageWrapper
         return CompressedData;
     }
 
-    if (ImageFormat == ENVImageFormat::PNG)
-    {
-        return CompressImagePNG(SourcePixelData);
-    }
+	if (ImageFormat == ENVImageFormat::PNG)
+	{
+		return CompressImagePNG(SourcePixelData);
+	}
 
     const EImageFormat ImageFormatType = ConvertExportFormatToImageFormat(ImageFormat);
     TSharedPtr<IImageWrapper> ImageWrapper = ImageWrapperModule->CreateImageWrapper(ImageFormatType);

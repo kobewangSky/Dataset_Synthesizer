@@ -57,6 +57,17 @@ bool UNVSceneDataExporter::HandleScenePixelsData(const FNVTexturePixelData& Capt
         const FString NewExportFilePath = GetExportFilePath(CapturedFeatureExtractor, CapturedViewpoint, FrameIndex, GetExportImageExtension(ExportImageFormat));
         ImageExporterThread->ExportImage(CapturedPixelData, NewExportFilePath, ExportImageFormat);
         bResult = true;
+
+		/*if (CapturedFeatureExtractor->DisplayName == "True Color")
+		{
+			FString PathPart, FilenamePart, ExtensionPart;
+			FPaths::Split(NewExportFilePath, PathPart, FilenamePart, ExtensionPart);
+			FilenamePart = FilenamePart + "_screenshot";
+			FString ScreenshotPath = PathPart + "/" + FilenamePart + "." + ExtensionPart;
+
+			FScreenshotRequest::RequestScreenshot(ScreenshotPath, false, false);
+		}*/
+		
     }
     return bResult;
 }

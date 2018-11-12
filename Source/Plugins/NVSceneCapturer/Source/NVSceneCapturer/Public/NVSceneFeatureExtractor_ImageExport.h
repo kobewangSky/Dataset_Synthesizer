@@ -155,3 +155,15 @@ public:
 protected:
     virtual void UpdateSettings() override;
 };
+
+//Base Screenshot
+UCLASS(Abstract)
+class NVSCENECAPTURER_API UNVSceneFeatureExtractor_ScreenShot : public UNVSceneFeatureExtractor_PixelData
+{
+	GENERATED_BODY()
+
+public:
+	UNVSceneFeatureExtractor_ScreenShot(const FObjectInitializer& ObjectInitializer);
+
+protected:
+};

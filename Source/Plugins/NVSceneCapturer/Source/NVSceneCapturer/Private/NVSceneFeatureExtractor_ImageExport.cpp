@@ -31,7 +31,7 @@ UNVSceneFeatureExtractor_PixelData::UNVSceneFeatureExtractor_PixelData(const FOb
     bOnlyShowTrainingActors = false;
     PostProcessMaterial = nullptr;
     bOverrideExportImageType = false;
-    ExportImageFormat = ENVImageFormat::PNG;
+    ExportImageFormat = ENVImageFormat::JPEG;
 	CapturedPixelFormat = ENVCapturedPixelFormat::RGBA8;
     OverrideTexturePixelFormat = EPixelFormat::PF_Unknown;
     PostProcessBlendWeight = 1.f;
@@ -318,4 +318,12 @@ void UNVSceneFeatureExtractor_VertexColorMask::UpdateSettings()
         }
     }
     GVertexColorViewMode = EVertexColorViewMode::Color;
+}
+
+//========================================== UNVSceneFeatureExtractor_Screenshot ==========================================
+
+UNVSceneFeatureExtractor_ScreenShot::UNVSceneFeatureExtractor_ScreenShot(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer)
+{
+	DisplayName = TEXT("Screenshot");
+	CaptureSource = ESceneCaptureSource::SCS_BaseColor;
 }
