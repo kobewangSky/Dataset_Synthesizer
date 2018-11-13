@@ -165,7 +165,7 @@ bool UNVSceneFeatureExtractor_AnnotationData::GatherActorData(const AActor* Chec
 
         const FTransform& ActorToWorldTransform_OpenCV = FTransform(ActorToWorldMatrix_OpenCV);
         const FTransform& ActorToCameraTransform_OpenCV = FTransform(ActorToCameraMatrix_OpenCV);
-
+                                                                                             
 
         const FVector& ActorLocation = CheckActor->GetActorLocation();
         const FVector& ActorForwardDir = ActorToWorldTransform.GetRotation().Vector();
