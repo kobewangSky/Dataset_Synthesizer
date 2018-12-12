@@ -135,7 +135,7 @@ public:
     {
         return NumberOfFramesToCapture;
     }
-
+	// TODO
     /// Capture controls
     UFUNCTION(BlueprintCallable, Category = "Capturer")
     void StartCapturing();
